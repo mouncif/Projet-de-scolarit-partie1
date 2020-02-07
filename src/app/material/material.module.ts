@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as Material from '@angular/material';
-
+import { MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -22,6 +22,10 @@ import * as Material from '@angular/material';
     Material.MatPaginatorModule,
     Material.MatIconModule,
     Material.MatSnackBarModule,
+    Material.MatSidenavModule,
+    Material.MatMenuModule,
+    Material.MatExpansionModule,
+    Material.MatDividerModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -38,6 +42,11 @@ import * as Material from '@angular/material';
     Material.MatPaginatorModule,
     Material.MatIconModule,
     Material.MatSnackBarModule,
+    Material.MatSidenavModule,
+    Material.MatMenuModule,
+    Material.MatExpansionModule,
+    Material.MatDividerModule
+
   ],
 })
 export class MaterialModule { }
