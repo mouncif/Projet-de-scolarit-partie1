@@ -1,28 +1,24 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport 
+  <mat-sidenav #drawer class="sidenav" fixedInViewport color="primary"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar >Menu</mat-toolbar>
-    <mat-accordion  *ngFor="let m of Menu" >
+    <mat-accordion  *ngFor="let m of liste | keyvalue" >
       <mat-expansion-panel class="buttom">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            <b>{{m.cat}}</b>
+            <b>{{m.key}}</b>
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <ng-container *ngFor="let i of m.item">
-          <button mat-button>{{i}}</button>      
+        <ng-container *ngFor="let i of m.value">
+          <!--<mat-icon aria-label="Side nav toggle icon">{{i.icon}}</mat-icon>           -->
+          <button mat-button class="ithem" (click)="action(i)">{{i.titre}}</button>    
         </ng-container>
       </mat-expansion-panel>
       
     </mat-accordion>
   </mat-sidenav>
-
-
-
-
-
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -50,6 +46,7 @@
         
       </mat-menu>
     </mat-toolbar>
+    <app-reclamation-note *ngIf="note"></app-reclamation-note>
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Reclamer une Note </h1>
+
+    <form   class="example-form" (submit)="onSubmit()">
+        <div class="controles-container">
+        <mat-form-field>
+            <mat-label>Numero module</mat-label>
+            <mat-select  >
+                <mat-option *ngFor="let i of liste" value="{{i}}">{{i}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-divider> </mat-divider>
+        <mat-form-field >
+            <mat-label>Partie </mat-label>
+            <mat-select  >
+                <mat-option value="Partie 1 ">Partie 1</mat-option>
+                <mat-option value="Partie 2 ">Partie 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <mat-form-field >
+            <input matInput placeholder="Note sur le PV" type ="number" class="example-full-width">
+          </mat-form-field><br/>
+          <mat-form-field >
+            <input matInput placeholder="Note réclamée" type ="number" class="example-full-width">
+          </mat-form-field>
+        <div class="button-row">
+            <button mat-raised-button color="primary" type="submit">Valider</button>
+        </div>
+    </div>
+    </form>

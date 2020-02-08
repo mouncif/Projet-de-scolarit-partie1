@@ -13,13 +13,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
+import { DemandePieceComponent } from './Etudiant/demande-piece/demande-piece.component';
+import { ReclamationNoteComponent } from './Etudiant/reclamation-note/reclamation-note.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
+    DemandePieceComponent,
+    ReclamationNoteComponent,
+
   ],
+  
+  entryComponents: [DemandePieceComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -36,7 +44,13 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+  ],
+  exports:[
+    AppComponent,
+    SidebarComponent,
+    DemandePieceComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,8 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 250px;
+  
 }
 
 .sidenav .mat-toolbar {
@@ -23,7 +24,7 @@
   right: 10px;
   
 }
-.buttom{
-  padding-top: 30px;
+.ithem{
+  width: 210px;
   
 }

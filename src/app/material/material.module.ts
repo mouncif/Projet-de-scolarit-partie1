@@ -25,7 +25,8 @@ import { MatMenuModule} from '@angular/material/menu';
     Material.MatSidenavModule,
     Material.MatMenuModule,
     Material.MatExpansionModule,
-    Material.MatDividerModule
+    Material.MatDividerModule,
+    Material.MatDialogModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -45,7 +46,8 @@ import { MatMenuModule} from '@angular/material/menu';
     Material.MatSidenavModule,
     Material.MatMenuModule,
     Material.MatExpansionModule,
-    Material.MatDividerModule
+    Material.MatDividerModule,
+    Material.MatDialogModule
 
   ],
 })

@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Demander pièce</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form" class="normal-form" (submit)="onSubmit()">
+        <div class="controles-container">
+        <mat-form-field>
+            <mat-label>choisir une piece</mat-label>
+            <mat-select  formControlName="selectFormControl">
+                <mat-option *ngFor="let i of liste" value="{{i}}">{{i}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-divider> </mat-divider>
+        <mat-form-field >
+            <mat-label>date recuperation</mat-label>
+            <input matInput [matDatepicker]="picker" [min]="minDate" [matDatepickerFilter]="myFilter"
+                placeholder="date recuperation" formControleName="dateFormControl"> 
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker color="primary" ></mat-datepicker>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <div class="button-row">
+            <button mat-raised-button color="warn" (click)="onNoClick()">Anuler</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Valider</button>
+        </div>
+    </div>
+    </form>
+</div>
