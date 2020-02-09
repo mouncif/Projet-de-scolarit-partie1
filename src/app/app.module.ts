@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { DemandePieceComponent } from './Etudiant/demande-piece/demande-piece.component';
 import { ReclamationNoteComponent } from './Etudiant/reclamation-note/reclamation-note.component';
+import { ReclamationPedagogiqueComponent } from './Etudiant/reclamation-pedagogique/reclamation-pedagogique.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ReclamationNoteComponent } from './Etudiant/reclamation-note/reclamatio
     SidebarComponent,
     DemandePieceComponent,
     ReclamationNoteComponent,
+    ReclamationPedagogiqueComponent,
 
   ],
   

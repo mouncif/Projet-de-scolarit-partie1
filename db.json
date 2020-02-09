@@ -3,93 +3,147 @@
     {
       "titre": "demander pièces",
       "cachee": false,
-      "categorie" : "pièces",
-      "icon" : "logout"
+      "categorie": "pièces",
+      "icon": "logout"
     },
     {
       "titre": "demander assurance",
       "cachee": false,
-      "categorie" : "pièces",
-      "icon" : "logout"
+      "categorie": "pièces",
+      "icon": "logout"
     },
     {
-      "titre": "reclamation bource",
+      "titre": "Réclamation bource",
       "cachee": false,
-      "categorie" : "Reclamation",
-      "icon" : "logout"
+      "categorie": "Reclamation",
+      "icon": "logout"
     },
     {
-      "titre": "réclamation Note",
+      "titre": "Réclamation Note",
       "cachee": false,
-      "categorie" : "Reclamation",
-      "icon" : "logout"
+      "categorie": "Reclamation",
+      "icon": "logout"
+    },
+    {
+      "titre": "Réclamation Pédagogique",
+      "cachee": false,
+      "categorie": "Reclamation",
+      "icon": "logout"
     }
   ],
-  "pieces":[
+  "pieces": [
     {
-      "id":1,
+      "id": 1,
       "siCache": true,
       "label": "BAC",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":2,
+      "id": 2,
       "siCache": false,
       "label": "DEUG",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":3,
+      "id": 3,
       "siCache": false,
       "label": "DEUST",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":4,
+      "id": 4,
       "siCache": false,
       "label": "LP",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":5,
+      "id": 5,
       "siCache": false,
       "label": "Master",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":6,
+      "id": 6,
       "siCache": false,
       "label": "Carte d'etdiant",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":7,
+      "id": 7,
       "siCache": false,
       "label": "Attestation de scolarité",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     },
     {
-      "id":2,
+      "id": 2,
       "siCache": false,
       "label": "relever de note",
       "nbr_total": 400,
-      "nbr_total_par_jour":20,
+      "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 0
     }
-
+  ],
+  "reclamations": [
+    {
+      "id": "A",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "pedagogique"
+    },
+    {
+      "id": "b",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "pedagogique"
+    },
+    {
+      "id": "7v5szCV",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "pedagogique"
+    },
+    {
+      "id": "WYj1N_W",
+      "etudiant": 123457,
+      "commantaire": "testComment",
+      "type": "pedagogique"
+    },
+    {
+      "id": "2XO6kfU",
+      "etudiant": 123457,
+      "commantaire": "hahaha",
+      "type": "pedagogique"
+    },
+    {
+      "id": "sQ_rQFg",
+      "etudiant": 123457,
+      "commantaire": "hahaha",
+      "type": "pedagogique"
+    },
+    {
+      "id": "nT9ommX",
+      "etudiant": 123457,
+      "type": "pedagogique"
+    },
+    {
+      "id": "A7TA9p-",
+      "etudiant": 123457,
+      "commantaire": "jjaj",
+      "type": "pedagogique"
+    }
   ]
 }

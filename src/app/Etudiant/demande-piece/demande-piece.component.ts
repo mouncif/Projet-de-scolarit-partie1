@@ -2,7 +2,7 @@ import { Component, OnInit,Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Piece } from 'src/app/Models/Piece';
 import { EtudiantService } from '../Service/etudiant.service';
-import{FormGroup,FormControl,Validators}from"@angular/forms";
+import{FormGroup,FormControl,Validators,FormBuilder}from"@angular/forms";
 
 @Component({
   selector: 'app-demande-piece',
@@ -12,19 +12,19 @@ import{FormGroup,FormControl,Validators}from"@angular/forms";
 export class DemandePieceComponent implements OnInit {
   liste : String[]=[]
   minDate: Date;
-  
-  form:FormGroup = new FormGroup({
-    selectFormControl : new FormControl('', Validators.required),
-    dateFormControl : new FormControl('', Validators.required)
-  });
+  form : FormGroup;
   
   ngOnInit() {
     this.remplireListe()
-    this.minDate = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDay()+3);
+    this.minDate = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDay());
+    this.form = new FormGroup({
+      selectFormControl :new FormControl('', Validators.required),
+      dateFormControl :new FormControl('', Validators.required) 
+    })
   }
   constructor(
     public dialogRef: MatDialogRef<DemandePieceComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Piece, private Service : EtudiantService) {
+    @Inject(MAT_DIALOG_DATA) public data: Piece, private Service : EtudiantService, private _formBuilder: FormBuilder) {
       
     }
 

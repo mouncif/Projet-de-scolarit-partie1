@@ -27,14 +27,16 @@ export class SidebarComponent implements OnInit{
     );
     menu : MenuItems[]=[]
     liste : Map<String, MenuItems[]> = new Map<String, MenuItems[]>();
-    note : boolean=false
+    inote : boolean=false
+    ipeda : boolean=false
+
 
   constructor(private breakpointObserver: BreakpointObserver, private service : EtudiantService,
     public dialog: MatDialog ) {
       
   }
   createMenu(){
-    this.service.findAll().subscribe(value => 
+    this.service.findAllitems().subscribe(value => 
       {
         this.menu = value
         let items : MenuItems[]=[];
@@ -64,8 +66,13 @@ export class SidebarComponent implements OnInit{
       height:'350px'  
     });
     }
-    if (i.titre == "réclamation Note"){
-      this.note=true
+    if (i.titre == "Réclamation Note"){
+      this.ipeda=false
+      this.inote=true
+    }
+    if (i.titre == "Réclamation Pédagogique"){
+      this.inote=false
+      this.ipeda=true
     }
 
   }

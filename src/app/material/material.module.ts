@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as Material from '@angular/material';
-import { MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -26,7 +25,8 @@ import { MatMenuModule} from '@angular/material/menu';
     Material.MatMenuModule,
     Material.MatExpansionModule,
     Material.MatDividerModule,
-    Material.MatDialogModule
+    Material.MatDialogModule,
+    
   ],
   exports: [
     Material.MatToolbarModule,

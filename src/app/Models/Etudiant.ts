@@ -4,6 +4,7 @@ export interface Etudiant {
   cin: string;
   prenom: string;
   datenaissance: string;
+  codeMassar:string
   ville: string;
   idFiliere: string;
   Tel: string;

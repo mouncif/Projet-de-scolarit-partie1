@@ -1,6 +1,8 @@
-<h1 mat-dialog-title>Reclamer une Note </h1>
+<div class="container">
 
-    <form   class="example-form" (submit)="onSubmit()">
+    <h1 mat-dialog-title>Reclamer une Note </h1>
+
+    <form  (submit)="onSubmit()" class="example-form">
         <div class="controles-container">
         <mat-form-field>
             <mat-label>Numero module</mat-label>
@@ -18,13 +20,15 @@
         </mat-form-field>
         <mat-divider></mat-divider>
         <mat-form-field >
-            <input matInput placeholder="Note sur le PV" type ="number" class="example-full-width">
+            <input matInput placeholder="Note sur le PV" type ="number"  min="0" max="20">
           </mat-form-field><br/>
           <mat-form-field >
-            <input matInput placeholder="Note réclamée" type ="number" class="example-full-width">
+            <input matInput placeholder="Note réclamée" type ="number"  min="0" max="20">
           </mat-form-field>
         <div class="button-row">
             <button mat-raised-button color="primary" type="submit">Valider</button>
         </div>
     </div>
     </form>
+
+</div>
