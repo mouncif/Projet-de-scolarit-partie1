@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Etudiant } from 'src/app/Models/Etudiant';
 import { EtudiantService } from '../Service/etudiant.service';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Reclamation } from 'src/app/Models/Reclamation';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -31,18 +31,23 @@ export class ReclamationPedagogiqueComponent implements OnInit {
   noteModule: 12
   };
   res : Reclamation[]=[];
-  input : FormControl;
+  input = new FormGroup  ({
+    commentaire : new FormControl('',Validators.required)
+  });
   private rec :Reclamation ={
     id:"",
     etudiant:0,
     commantaire:"",
-    type:""
+    type:"",
+    module:"",
+    note:0,
+    notePV:0,
+    partie:""
   };
   comment : string;
   constructor(private service : EtudiantService,private _snackBar: MatSnackBar) { }
   
   ngOnInit() {
-    this.input = new FormControl('',Validators.required);
   }
  
   reclamation(){

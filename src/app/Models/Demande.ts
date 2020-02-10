@@ -1,6 +1,6 @@
 export interface Demande {
-  id: number;
-  idEtudiant: string;
-  idPiece: number;
+  id?: string;
+  idEtudiant: number;
+  idPiece: string;
   date: string;
 }

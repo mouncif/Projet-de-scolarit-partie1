@@ -2,6 +2,8 @@
     <h1 > Information personnelles </h1>
 
     <div>
+        <form  [formGroup]="input" (submit)="reclamation()" class="example-form">
+
         <h3 mat-dialog-title>Nom : {{e.nom}}</h3>
         <h3 mat-dialog-title>Prénom : {{e.prenom}}</h3>
         <h3 mat-dialog-title>Date Naissance :  {{e.datenaissance}}</h3>
@@ -11,11 +13,12 @@
         <h3 mat-dialog-title>Code Massar : {{e.codeMassar}}</h3>
         <mat-divider></mat-divider>
         <mat-form-field class="example-full-width">
-            <textarea matInput placeholder="Commantaire " class="form-control"  [(ngModel)]="comment"
+            <textarea matInput placeholder="Commantaire " [(ngModel)]="comment" formControlName="commentaire"
              ></textarea>
           </mat-form-field>
           <mat-divider></mat-divider>
-          <button mat-raised-button color="primary" class ="b"(click) ="reclamation()"> reclamer</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="input.invalid">Réclamer</button>
+        </form>
     </div>
 
 

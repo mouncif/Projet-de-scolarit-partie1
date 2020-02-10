@@ -2,31 +2,33 @@
 
     <h1 mat-dialog-title>Reclamer une Note </h1>
 
-    <form  (submit)="onSubmit()" class="example-form">
+    <form  [formGroup]="form" (submit)="onSubmit()" class="example-form">
         <div class="controles-container">
         <mat-form-field>
             <mat-label>Numero module</mat-label>
-            <mat-select  >
+            <mat-select  formControlName ="module" [(ngModel)]="rec.module">
                 <mat-option *ngFor="let i of liste" value="{{i}}">{{i}}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-divider> </mat-divider>
         <mat-form-field >
             <mat-label>Partie </mat-label>
-            <mat-select  >
+            <mat-select  formControlName="partie" [(ngModel)]="rec.partie">
                 <mat-option value="Partie 1 ">Partie 1</mat-option>
                 <mat-option value="Partie 2 ">Partie 2</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-divider></mat-divider>
         <mat-form-field >
-            <input matInput placeholder="Note sur le PV" type ="number"  min="0" max="20">
+            <input matInput placeholder="Note sur le PV" type ="number"  
+            min="0" max="20" formControlName="notePV" [(ngModel)]="rec.notePV">
           </mat-form-field><br/>
           <mat-form-field >
-            <input matInput placeholder="Note réclamée" type ="number"  min="0" max="20">
+            <input matInput placeholder="Note réclamée" type ="number" 
+             min="0" max="20" formControlName="note" [(ngModel)]="rec.note">
           </mat-form-field>
         <div class="button-row">
-            <button mat-raised-button color="primary" type="submit">Valider</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Valider</button>
         </div>
     </div>
     </form>
