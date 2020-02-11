@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { EtudiantService } from '../Service/etudiant.service';
 import { Etudiant } from 'src/app/Models/Etudiant';
 import { MatSnackBar } from '@angular/material';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-reclamation-note',
@@ -19,7 +20,9 @@ export class ReclamationNoteComponent implements OnInit {
     module:"",
     note:0,
     notePV:0,
-    partie:""
+    partie:"",
+    date :"",
+    siValider:false
   };
   private e :Etudiant ={
     nom: "Doe ",
@@ -39,7 +42,7 @@ export class ReclamationNoteComponent implements OnInit {
     noteModule: 12
     };
     res : Reclamation[]=[];
-  constructor(private service :EtudiantService, private _snackBar: MatSnackBar) { }
+  constructor(private service :EtudiantService, private _snackBar: MatSnackBar, private pipe : DatePipe) { }
   liste : String[] =[]
   form = new FormGroup({
     module : new FormControl('',Validators.required),
@@ -57,6 +60,8 @@ export class ReclamationNoteComponent implements OnInit {
     this.rec.etudiant=this.e.apogee
     this.rec.type="note";
     this.rec.commantaire="";
+    this.rec.siValider=false;
+    this.rec.date=this.pipe.transform(new Date(), 'yyyy/MM/dd')
     this.service.addReclamation(this.rec).subscribe((rec)=>{
       this.res = [rec, ...this.res];
       

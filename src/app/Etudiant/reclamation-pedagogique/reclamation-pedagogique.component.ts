@@ -4,7 +4,7 @@ import { EtudiantService } from '../Service/etudiant.service';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Reclamation } from 'src/app/Models/Reclamation';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -42,10 +42,12 @@ export class ReclamationPedagogiqueComponent implements OnInit {
     module:"",
     note:0,
     notePV:0,
-    partie:""
+    partie:"",
+    date :"",
+    siValider:false
   };
   comment : string;
-  constructor(private service : EtudiantService,private _snackBar: MatSnackBar) { }
+  constructor(private service : EtudiantService,private _snackBar: MatSnackBar, private pipe : DatePipe) { }
   
   ngOnInit() {
   }
@@ -54,6 +56,8 @@ export class ReclamationPedagogiqueComponent implements OnInit {
     this.rec.etudiant=this.e.apogee
     this.rec.type="pedagogique"
     this.rec.commantaire=this.comment
+    this.rec.siValider=false
+    this.rec.date=this.pipe.transform(new Date(), 'yyyy/MM/dd')
     this.service.addReclamation(this.rec).subscribe((rec)=>{
       this.res = [rec, ...this.res];
       this.comment=""

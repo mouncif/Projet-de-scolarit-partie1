@@ -1,5 +1,7 @@
 <div class="container">
-    <h1 > Information personnelles </h1>
+    
+    <mat-card class="example-card">
+        <mat-card-title>Information personnelles</mat-card-title>
 
     <div>
         <form  [formGroup]="input" (submit)="reclamation()" class="example-form">
@@ -17,9 +19,10 @@
              ></textarea>
           </mat-form-field>
           <mat-divider></mat-divider>
-          <button mat-raised-button color="primary" type="submit" [disabled]="input.invalid">Réclamer</button>
+          <button mat-raised-button color="primary" class="b" type="submit" [disabled]="input.invalid">Réclamer</button>
         </form>
     </div>
+</mat-card>
 
 
 

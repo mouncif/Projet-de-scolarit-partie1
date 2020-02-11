@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DemandePieceComponent } from './Etudiant/demande-piece/demande-piece.component';
 import { ReclamationNoteComponent } from './Etudiant/reclamation-note/reclamation-note.component';
 import { ReclamationPedagogiqueComponent } from './Etudiant/reclamation-pedagogique/reclamation-pedagogique.component';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { ReclamationPedagogiqueComponent } from './Etudiant/reclamation-pedagogi
     SidebarComponent,
     DemandePieceComponent,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

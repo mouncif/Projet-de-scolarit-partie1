@@ -10,10 +10,11 @@ import { Demande } from 'src/app/Models/Demande';
   providedIn: 'root'
 })
 export class EtudiantService {
-  private url ="http://localhost:3000/items"
+  private url =""
   constructor(private http : HttpClient) { }
 
 findAllitems(){
+  this.url="http://localhost:3000/items"
  return this.http.get<MenuItems[]>(this.url);
 }
 
@@ -30,4 +31,5 @@ demanderPiece(demande: Demande){
   this.url="http://localhost:3000/demandes"
   return this.http.post<Demande>(this.url, demande);
 }
+
 }

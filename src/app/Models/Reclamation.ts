@@ -6,5 +6,7 @@ export interface Reclamation{
     notePV: number,
     note: number,
     module : string,
-    partie : string
+    partie : string,
+    date : string,
+    siValider :boolean
 }

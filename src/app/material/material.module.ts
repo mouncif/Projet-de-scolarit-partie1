@@ -26,7 +26,7 @@ import * as Material from '@angular/material';
     Material.MatExpansionModule,
     Material.MatDividerModule,
     Material.MatDialogModule,
-    
+    Material.MatCardModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -47,7 +47,8 @@ import * as Material from '@angular/material';
     Material.MatMenuModule,
     Material.MatExpansionModule,
     Material.MatDividerModule,
-    Material.MatDialogModule
+    Material.MatDialogModule,
+    Material.MatCardModule
 
   ],
 })

@@ -4,7 +4,7 @@
         <div class="controles-container">
         <mat-form-field>
             <mat-label>choisir une piece</mat-label>
-            <mat-select  formControlName="selectFormControl" [(ngModel)]="demande.idPiece">
+            <mat-select  #string formControlName="selectFormControl" [(ngModel)]="demande.idPiece" (ngModelChange)="onNgModelChange($event)">
                 <mat-option *ngFor="let i of liste" value="{{i}}">{{i}}</mat-option>
             </mat-select>
             <mat-error>choisir une pièce </mat-error>
@@ -12,7 +12,8 @@
         <mat-divider> </mat-divider>
         <mat-form-field >
             <mat-label>date recuperation</mat-label>
-            <input matInput [matDatepicker]="picker" [min]="minDate" [matDatepickerFilter]="myFilter" [(ngModel)]="demande.date"
+            <input matInput [matDatepicker]="picker" [min]="minDate" [matDatepickerFilter]="myFilter" 
+            [(ngModel)]="demande.date_recuperation"
                 placeholder="date recuperation" formControlName="dateFormControl"> 
                 <mat-error>choisir une date </mat-error>
                 <mat-datepicker-toggle matSuffix [for]="picker"  ></mat-datepicker-toggle>
