@@ -14,7 +14,7 @@
     },
     {
       "titre": "demander assurance",
-      "cachee": false,
+      "cachee": true,
       "categorie": "pièces",
       "icon": "logout"
     },
@@ -118,18 +118,7 @@
     }
   ],
   "reclamations": [
-    {
-      "id": "NTpTKo7",
-      "etudiant": 123457,
-      "commantaire": "testDate et sivalider",
-      "type": "pedagogique",
-      "module": "",
-      "note": 0,
-      "notePV": 0,
-      "partie": "",
-      "date": "2020/02/11",
-      "siValider": false
-    },
+    
     {
       "id": "g5iaf2z",
       "etudiant": 123457,
@@ -142,22 +131,11 @@
       "date": "2020/02/11",
       "siValider": false
     },
-    {
-      "id": "E0u3Dbz",
-      "etudiant": 123457,
-      "commantaire": "",
-      "type": "note",
-      "module": "module 3",
-      "note": 10,
-      "notePV": 12,
-      "partie": "Partie 2 ",
-      "date": "2020/02/11",
-      "siValider": false
-    },
+    
     {
       "id": "RScQUcR",
       "etudiant": 123457,
-      "commantaire": "test 2 test ",
+      "commantaire": "Nom incorrect",
       "type": "pedagogique",
       "module": "",
       "note": 0,
@@ -171,25 +149,14 @@
       "etudiant": 123457,
       "commantaire": "",
       "type": "note",
-      "module": "module 3",
+      "module": "module 7",
       "note": 15,
       "notePV": 12,
       "partie": "Partie 2 ",
       "date": "2020/02/12",
       "siValider": false
     },
-    {
-      "id": "iRFs1pi",
-      "etudiant": 123457,
-      "commantaire": "note incorrecte",
-      "type": "pedagogique",
-      "module": "",
-      "note": 0,
-      "notePV": 0,
-      "partie": "",
-      "date": "2020/02/12",
-      "siValider": false
-    },
+    
     {
       "id": "TKjbRSS",
       "etudiant": 123457,
@@ -252,22 +219,8 @@
       "date_recuperation": "2020/02/14",
       "siValider": false
     },
-    {
-      "id": 21,
-      "idEtudiant": 123,
-      "idPiece": "BAC",
-      "date_creation": "2020/02/12",
-      "date_recuperation": "2020/02/21",
-      "siValider": false
-    },
-    {
-      "id": 25,
-      "idEtudiant": 123,
-      "idPiece": "LP",
-      "date_creation": "2020/02/12",
-      "date_recuperation": "2020/02/18",
-      "siValider": false
-    },
+    
+   
     {
       "id": 26,
       "idEtudiant": 123,
