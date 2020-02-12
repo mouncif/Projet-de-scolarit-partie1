@@ -1,18 +1,20 @@
 <div class="container">
     
     <mat-card class="example-card">
-        <mat-card-title>Information personnelles</mat-card-title>
+        <mat-card-title>Informations personnelles</mat-card-title>
+        <mat-divider></mat-divider>
 
     <div>
-        <form  [formGroup]="input" (submit)="reclamation()" class="example-form">
-
-        <h3 mat-dialog-title>Nom : {{e.nom}}</h3>
-        <h3 mat-dialog-title>Prénom : {{e.prenom}}</h3>
-        <h3 mat-dialog-title>Date Naissance :  {{e.datenaissance}}</h3>
-        <h3 mat-dialog-title>Cin :  {{e.cin}}</h3>
-        <mat-divider></mat-divider>
-        <h3 mat-dialog-title>Apogée : {{e.apogee}}</h3>
-        <h3 mat-dialog-title>Code Massar : {{e.codeMassar}}</h3>
+        <form  [formGroup]="input" (submit)="reclamation()" >
+            <br/>
+            <b><label class="labelClass"> Nom :</label></b> {{e.nom}}<br/><br/>
+            <b><label class="labelClass"> Prénom :</label></b> {{e.prenom}}<br/><br/>
+            <b><label class="labelClass"> Date Naissance :</label></b>{{e.datenaissance}}<br/><br/>
+            <b><label class="labelClass">Cin : </label></b>{{e.cin}}<br/><br/>
+            <mat-divider></mat-divider><br/>
+            <b><label class="labelClass">Apogée : </label></b>{{e.apogee}}<br/><br/>
+            <b><label class="labelClass">Code Massar : </label></b>{{e.codeMassar}}<br/><br/>
+        <h2 mat-dialog-title></h2>
         <mat-divider></mat-divider>
         <mat-form-field class="example-full-width">
             <textarea matInput placeholder="Commantaire " [(ngModel)]="comment" formControlName="commentaire"

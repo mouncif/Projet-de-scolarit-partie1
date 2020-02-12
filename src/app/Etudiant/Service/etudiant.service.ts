@@ -31,5 +31,12 @@ demanderPiece(demande: Demande){
   this.url="http://localhost:3000/demandes"
   return this.http.post<Demande>(this.url, demande);
 }
-
+getDemandes(){
+  this.url="http://localhost:3000/demandes"
+  return this.http.get<Demande[]>(this.url);
+}
+getReclamations(){
+  this.url="http://localhost:3000/reclamations"
+  return this.http.get<Reclamation[]>(this.url);
+}
 }

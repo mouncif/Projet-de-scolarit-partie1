@@ -1,0 +1,73 @@
+<div class="container">
+  <mat-card >
+    <mat-card-title>Votre réclamation</mat-card-title>
+    <mat-divider></mat-divider><br/>
+  <div >
+    <mat-accordion  >
+      <mat-expansion-panel class="buttom">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <b>Réclmations note</b>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container>
+          <table mat-table [dataSource]="note" class="mat-elevation-z8">
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> <b>Code</b> </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="module">
+                  <th mat-header-cell *matHeaderCellDef> <b>Module</b> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.module}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="partie">
+                  <th mat-header-cell *matHeaderCellDef> <b>partie</b> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.partie}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="notePV">
+                  <th mat-header-cell *matHeaderCellDef> <b>Note PV </b></th>
+                  <td mat-cell *matCellDef="let element"> {{element.notePV}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="note">
+                    <th mat-header-cell *matHeaderCellDef> <b>note</b> </th>
+                    <td mat-cell *matCellDef="let element"> {{element.note}} </td>
+                  </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="noteCulums"></tr>
+              <tr mat-row *matRowDef="let row; columns: noteCulums;"></tr>
+            </table>
+        </ng-container>
+      </mat-expansion-panel>
+    </mat-accordion><br/>
+    <mat-accordion >
+      <mat-expansion-panel class="buttom">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <b>Réclmations pédagogique</b>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container>
+          <table mat-table [dataSource]="peda" class="mat-elevation-z8">
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> <b>Code</b> </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="commantaire">
+                  <th mat-header-cell *matHeaderCellDef> <b>Commantaire</b> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.commantaire}} </td>
+                </ng-container>
+              <tr mat-header-row *matHeaderRowDef="pedCulums"></tr>
+              <tr mat-row *matRowDef="let row; columns: pedCulums;"></tr>
+            </table>
+        </ng-container>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  </mat-card>
+  
+</div>

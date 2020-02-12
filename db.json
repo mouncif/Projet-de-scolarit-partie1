@@ -7,6 +7,12 @@
       "icon": "logout"
     },
     {
+      "titre": "Mes demandes",
+      "cachee": false,
+      "categorie": "pièces",
+      "icon": "logout"
+    },
+    {
       "titre": "demander assurance",
       "cachee": false,
       "categorie": "pièces",
@@ -29,16 +35,22 @@
       "cachee": false,
       "categorie": "Reclamation",
       "icon": "logout"
+    },
+    {
+      "titre": "Mes Réclamations",
+      "cachee": false,
+      "categorie": "Reclamation",
+      "icon": "logout"
     }
   ],
   "pieces": [
     {
       "id": 1,
-      "siCache": true,
+      "siCache": false,
       "label": "BAC",
       "nbr_total": 400,
-      "nbr_total_par_jour": 20,
-      "nbr_demande_par_jour": 0,
+      "nbr_total_par_jour": 50,
+      "nbr_demande_par_jour": 3,
       "nbr_totale_demander": 40
     },
     {
@@ -48,16 +60,16 @@
       "nbr_total": 400,
       "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 1,
-      "nbr_totale_demander": 40
+      "nbr_totale_demander": 0
     },
     {
       "id": 3,
-      "siCache": false,
+      "siCache": true,
       "label": "DEUST",
       "nbr_total": 400,
       "nbr_total_par_jour": 20,
-      "nbr_demande_par_jour": 0,
-      "nbr_totale_demander": 40
+      "nbr_demande_par_jour": 1,
+      "nbr_totale_demander": 0
     },
     {
       "id": 4,
@@ -65,7 +77,7 @@
       "label": "LP",
       "nbr_total": 400,
       "nbr_total_par_jour": 20,
-      "nbr_demande_par_jour": 0,
+      "nbr_demande_par_jour": 1,
       "nbr_totale_demander": 40
     },
     {
@@ -75,7 +87,7 @@
       "nbr_total": 400,
       "nbr_total_par_jour": 20,
       "nbr_demande_par_jour": 1,
-      "nbr_totale_demander": 40
+      "nbr_totale_demander": 5
     },
     {
       "id": 6,
@@ -153,6 +165,42 @@
       "partie": "",
       "date": "2020/02/11",
       "siValider": false
+    },
+    {
+      "id": "D1onQJP",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 3",
+      "note": 15,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2020/02/12",
+      "siValider": false
+    },
+    {
+      "id": "iRFs1pi",
+      "etudiant": 123457,
+      "commantaire": "note incorrecte",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2020/02/12",
+      "siValider": false
+    },
+    {
+      "id": "TKjbRSS",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 5",
+      "note": 2,
+      "notePV": 7,
+      "partie": "Partie 2 ",
+      "date": "2020/02/12",
+      "siValider": false
     }
   ],
   "demandes": [
@@ -170,6 +218,38 @@
       "idPiece": "Carte d'etdiant",
       "date_creation": "2020/02/11",
       "date_recuperation": "2020/02/14",
+      "siValider": false
+    },
+    {
+      "id": 18,
+      "idEtudiant": 123,
+      "idPiece": "BAC",
+      "date_creation": "2020/02/12",
+      "date_recuperation": "2020/02/14",
+      "siValider": false
+    },
+    {
+      "id": 21,
+      "idEtudiant": 123,
+      "idPiece": "BAC",
+      "date_creation": "2020/02/12",
+      "date_recuperation": "2020/02/21",
+      "siValider": false
+    },
+    {
+      "id": 25,
+      "idEtudiant": 123,
+      "idPiece": "LP",
+      "date_creation": "2020/02/12",
+      "date_recuperation": "2020/02/18",
+      "siValider": false
+    },
+    {
+      "id": 26,
+      "idEtudiant": 123,
+      "idPiece": "LP",
+      "date_creation": "2020/02/12",
+      "date_recuperation": "2020/02/17",
       "siValider": false
     }
   ]

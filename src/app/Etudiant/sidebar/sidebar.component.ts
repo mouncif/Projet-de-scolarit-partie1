@@ -6,6 +6,7 @@ import { EtudiantService } from '../Service/etudiant.service';
 import { MenuItems } from 'src/app/Models/MenuItems';
 import {MatDialog} from '@angular/material/dialog';
 import { DemandePieceComponent } from '../demande-piece/demande-piece.component';
+import { Demande } from 'src/app/Models/Demande';
 
 
 @Component({
@@ -29,6 +30,9 @@ export class SidebarComponent implements OnInit{
     liste : Map<String, MenuItems[]> = new Map<String, MenuItems[]>();
     inote : boolean=false
     ipeda : boolean=false
+    idemande: boolean=false
+    ireclamation: boolean=false
+
 
 
   constructor(private breakpointObserver: BreakpointObserver, private service : EtudiantService,
@@ -69,12 +73,27 @@ export class SidebarComponent implements OnInit{
     if (i.titre == "Réclamation Note"){
       this.ipeda=false
       this.inote=true
+      this.idemande=false
+      this.ireclamation=false
     }
     if (i.titre == "Réclamation Pédagogique"){
       this.inote=false
       this.ipeda=true
+      this.idemande=false
+      this.ireclamation=false
     }
-
+    if (i.titre == "Mes demandes"){
+      this.inote=false
+      this.ipeda=false
+      this.idemande=true
+      this.ireclamation=false
+         }
+    if (i.titre =="Mes Réclamations"){
+      this.inote=false
+      this.ipeda=false
+      this.idemande=false
+      this.ireclamation=true
+    }
   }
   }
 

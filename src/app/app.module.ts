@@ -18,6 +18,8 @@ import { DemandePieceComponent } from './Etudiant/demande-piece/demande-piece.co
 import { ReclamationNoteComponent } from './Etudiant/reclamation-note/reclamation-note.component';
 import { ReclamationPedagogiqueComponent } from './Etudiant/reclamation-pedagogique/reclamation-pedagogique.component';
 import { DatePipe } from '@angular/common';
+import { EtudiantDemandesComponent } from './Etudiant/etudiant-demandes/etudiant-demandes.component';
+import { EtudiantReclamationsComponent } from './Etudiant/etudiant-reclamations/etudiant-reclamations.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { DatePipe } from '@angular/common';
     DemandePieceComponent,
     ReclamationNoteComponent,
     ReclamationPedagogiqueComponent,
+    EtudiantDemandesComponent,
+    EtudiantReclamationsComponent,
 
   ],
   

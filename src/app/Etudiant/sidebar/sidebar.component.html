@@ -3,8 +3,9 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar >Menu</mat-toolbar>
-    <mat-accordion  *ngFor="let m of liste | keyvalue" >
+    <img mat-card-image src="../../../assets/img/logo.jpeg" alt="" class="logo-wrapper"/>
+    <h1 ></h1>
+    <mat-accordion   *ngFor="let m of liste | keyvalue" >
       <mat-expansion-panel class="buttom">
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -13,10 +14,10 @@
         </mat-expansion-panel-header>
         <ng-container *ngFor="let i of m.value">
           <!--<mat-icon aria-label="Side nav toggle icon">{{i.icon}}</mat-icon>           -->
-          <button mat-button class="ithem" (click)="action(i)">{{i.titre}}</button>    
+          <button mat-raised-button class="ithem" (click)="action(i)"><b>{{i.titre}}</b></button>    
         </ng-container>
       </mat-expansion-panel>
-      
+      <br/>
     </mat-accordion>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -48,6 +49,8 @@
     </mat-toolbar>
     <app-reclamation-note *ngIf="inote"></app-reclamation-note>
     <app-reclamation-pedagogique *ngIf="ipeda"></app-reclamation-pedagogique>
+    <app-etudiant-demandes *ngIf="idemande"></app-etudiant-demandes>
+    <app-etudiant-reclamations *ngIf="ireclamation"></app-etudiant-reclamations>
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>
