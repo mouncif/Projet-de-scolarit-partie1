@@ -5,7 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <img mat-card-image src="../../../assets/img/logo.jpeg" alt="" class="logo-wrapper"/>
     <h1 ></h1>
-    <mat-accordion   *ngFor="let m of liste | keyvalue" >
+    <button mat-raised-button color="accent" class="btn" (click)="home()"><b>acceuil</b></button>    
+    <mat-accordion   *ngFor="let m of liste | keyvalue"  >
       <mat-expansion-panel class="buttom">
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -17,11 +18,11 @@
           <button mat-raised-button class="ithem" (click)="action(i)"><b>{{i.titre}}</b></button>    
         </ng-container>
       </mat-expansion-panel>
-      <br/>
+      
     </mat-accordion>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -30,7 +31,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Etudiant</span>
+      <mat-label>FPBM | Scolarité</mat-label>
       <button mat-icon-button [matMenuTriggerFor]="menu" class="right">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -47,6 +48,7 @@
         
       </mat-menu>
     </mat-toolbar>
+    <app-home *ngIf="ihome"></app-home>
     <app-reclamation-note *ngIf="inote"></app-reclamation-note>
     <app-reclamation-pedagogique *ngIf="ipeda"></app-reclamation-pedagogique>
     <app-etudiant-demandes *ngIf="idemande"></app-etudiant-demandes>

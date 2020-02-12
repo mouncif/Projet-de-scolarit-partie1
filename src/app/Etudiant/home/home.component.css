@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 400px;
+
+  }
+ .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 80%;
+  }
+
+  #global {
+    margin-left: auto;
+    margin-right: auto;
+    width:100; /* largeur obligatoire pour être centré */
+  }
+  img{
+    width: 100%;
+    height: 400px;
+}
+#thediv{
+    margin: 3% 0% 0% 20%;
+    width: 98%;
+}
+#btn{
+    margin-top: 40px;
+}

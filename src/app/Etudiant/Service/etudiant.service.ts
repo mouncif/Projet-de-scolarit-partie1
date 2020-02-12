@@ -5,6 +5,7 @@ import { Piece } from 'src/app/Models/Piece';
 import { Reclamation } from 'src/app/Models/Reclamation';
 import { ReclamationNoteComponent } from '../reclamation-note/reclamation-note.component';
 import { Demande } from 'src/app/Models/Demande';
+import { Avis } from 'src/app/Models/Avis';
 
 @Injectable({
   providedIn: 'root'
@@ -39,4 +40,9 @@ getReclamations(){
   this.url="http://localhost:3000/reclamations"
   return this.http.get<Reclamation[]>(this.url);
 }
+findAll(){
+  this.url="http://localhost:3000/avis?isValide=true";
+  return this.http.get<Avis[]>(this.url);
+}
+
 }

@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit{
     ipeda : boolean=false
     idemande: boolean=false
     ireclamation: boolean=false
-
+    ihome : boolean =true
 
 
   constructor(private breakpointObserver: BreakpointObserver, private service : EtudiantService,
@@ -62,6 +62,13 @@ export class SidebarComponent implements OnInit{
   });
 
   }
+  home(){
+      this.ipeda=false
+      this.inote=false
+      this.idemande=false
+      this.ireclamation=false
+      this.ihome=true
+  }
   action(i:MenuItems ){
     if(i.titre =="demander pièces"){
 
@@ -72,24 +79,28 @@ export class SidebarComponent implements OnInit{
     }
     if (i.titre == "Réclamation Note"){
       this.ipeda=false
+      this.ihome=false
       this.inote=true
       this.idemande=false
       this.ireclamation=false
     }
     if (i.titre == "Réclamation Pédagogique"){
       this.inote=false
+      this.ihome=false
       this.ipeda=true
       this.idemande=false
       this.ireclamation=false
     }
     if (i.titre == "Mes demandes"){
       this.inote=false
+      this.ihome=false
       this.ipeda=false
       this.idemande=true
       this.ireclamation=false
          }
     if (i.titre =="Mes Réclamations"){
       this.inote=false
+      this.ihome=false
       this.ipeda=false
       this.idemande=false
       this.ireclamation=true

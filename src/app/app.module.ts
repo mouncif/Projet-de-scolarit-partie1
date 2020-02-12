@@ -20,7 +20,9 @@ import { ReclamationPedagogiqueComponent } from './Etudiant/reclamation-pedagogi
 import { DatePipe } from '@angular/common';
 import { EtudiantDemandesComponent } from './Etudiant/etudiant-demandes/etudiant-demandes.component';
 import { EtudiantReclamationsComponent } from './Etudiant/etudiant-reclamations/etudiant-reclamations.component';
-
+import { HomeComponent } from './Etudiant/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PopavisComponent } from './Etudiant/popavis/popavis.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { EtudiantReclamationsComponent } from './Etudiant/etudiant-reclamations/
     ReclamationPedagogiqueComponent,
     EtudiantDemandesComponent,
     EtudiantReclamationsComponent,
-
+    HomeComponent,
+    PopavisComponent,
+    
   ],
   
-  entryComponents: [DemandePieceComponent],
+  entryComponents: [DemandePieceComponent,PopavisComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -53,6 +57,7 @@ import { EtudiantReclamationsComponent } from './Etudiant/etudiant-reclamations/
     MatIconModule,
     MatListModule,
     HttpClientModule,
+    NgbModule
   ],
   exports:[
     AppComponent,

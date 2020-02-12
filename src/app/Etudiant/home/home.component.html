@@ -1,0 +1,19 @@
+    <div class='container-fluid' >
+        <div class="col col-lg-6" id="thediv">
+        <ngb-carousel >
+        <ng-template  ngbSlide *ngFor="let avis of tabl" >
+            <div >
+            <h6>Date:{{avis.Date}}</h6>
+          <img src="../../../assets/img/avis.jpg" alt="Random first slide">
+          
+        <b> <div class="col col-lg-12"  >
+            {{avis.corp}}  
+            </div> </b> 
+            <button class="col col-12" id="btn" mat-button (click)="openDialog($event,avis)"> lire la suite...</button>
+        </div>
+        </ng-template>
+      </ngb-carousel>
+            
+        </div>
+   
+        </div>

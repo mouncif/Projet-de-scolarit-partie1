@@ -34,6 +34,9 @@
   height: 100px;
   margin: 20px 10px 0px 100px;
 }
-.down{
-  margin-top: 30px;
+.btn{
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 10px;
+
 }

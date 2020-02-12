@@ -12,8 +12,8 @@ export class EtudiantReclamationsComponent implements OnInit {
   constructor(private service : EtudiantService) { }
   note : Reclamation[]=[]
   peda : Reclamation[]=[]
-  noteCulums : String[]=['id','module','partie','notePV','note']
-  pedCulums : String[]=['id','commantaire']
+  noteCulums : String[]=['id','module','partie','notePV','note', 'date']
+  pedCulums : String[]=['id','date','commantaire']
   ngOnInit() {
     console.log(this.note);
     
