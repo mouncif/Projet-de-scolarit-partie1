@@ -21,25 +21,25 @@
     {
       "titre": "Réclamation bource",
       "cachee": true,
-      "categorie": "Reclamation",
+      "categorie": "Réclamations",
       "icon": "logout"
     },
     {
       "titre": "Réclamation Note",
       "cachee": false,
-      "categorie": "Reclamation",
+      "categorie": "Réclamations",
       "icon": "logout"
     },
     {
       "titre": "Réclamation Pédagogique",
       "cachee": false,
-      "categorie": "Reclamation",
+      "categorie": "Réclamations",
       "icon": "logout"
     },
     {
       "titre": "Mes Réclamations",
       "cachee": false,
-      "categorie": "Reclamation",
+      "categorie": "Réclamations",
       "icon": "logout"
     }
   ],
@@ -118,7 +118,6 @@
     }
   ],
   "reclamations": [
-    
     {
       "id": "g5iaf2z",
       "etudiant": 123457,
@@ -131,7 +130,6 @@
       "date": "2020/02/11",
       "siValider": false
     },
-    
     {
       "id": "RScQUcR",
       "etudiant": 123457,
@@ -156,7 +154,6 @@
       "date": "2020/02/12",
       "siValider": false
     },
-    
     {
       "id": "TKjbRSS",
       "etudiant": 123457,
@@ -192,6 +189,54 @@
       "partie": "",
       "date": "2020/02/12",
       "siValider": false
+    },
+    {
+      "id": "EXXdq8_",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 1",
+      "note": 15,
+      "notePV": 13,
+      "partie": "Partie 1 ",
+      "date": "2020/02/13",
+      "siValider": false
+    },
+    {
+      "id": "p8cVcoN",
+      "etudiant": 123457,
+      "commantaire": "date de naissance incorecte",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2020/02/13",
+      "siValider": false
+    },
+    {
+      "id": "CoLKzYJ",
+      "etudiant": 123457,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 1",
+      "note": 13,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2020/02/13",
+      "siValider": false
+    },
+    {
+      "id": "Xod_IlW",
+      "etudiant": 123457,
+      "commantaire": "comment",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2020/02/13",
+      "siValider": false
     }
   ],
   "demandes": [
@@ -219,14 +264,12 @@
       "date_recuperation": "2020/02/14",
       "siValider": false
     },
-    
-   
     {
-      "id": 26,
+      "id": 19,
       "idEtudiant": 123,
-      "idPiece": "LP",
-      "date_creation": "2020/02/12",
-      "date_recuperation": "2020/02/17",
+      "idPiece": "BAC",
+      "date_creation": "2020/02/13",
+      "date_recuperation": "2020/02/14",
       "siValider": false
     }
   ],
@@ -235,7 +278,7 @@
       "id": 1,
       "idprof": "USER 1",
       "corp": "Natural science – branch of science concerned with the description, prediction, and understanding of natural phenomena, based on empirical evidence from observation and experimentation.",
-      "title": " zahi derwech",
+      "title": " john doe",
       "Date": "2020/02/05",
       "isValide": true
     },
@@ -243,15 +286,15 @@
       "id": 2,
       "idprof": "USER 2",
       "corp": "Religions – social-cultural systems of designated behaviors and practices, morals, worldviews, texts, sanctified places, prophecies, ethics, or organizations, that relates humanity to supernatural, transcendental, or spiritual elements.",
-      "title": " zahi derwech",
+      "title": " jane doe",
       "Date": "2020/02/09",
-      "isValide": false
+      "isValide": true
     },
     {
       "id": 3,
       "idprof": "USER 3",
       "corp": "Reference works – compendiums of information, usually of a specific type, compiled in a book for ease of reference. That is, the information is intended to be quickly found when needed.",
-      "title": " zahi derwech",
+      "title": " steve jobs",
       "Date": "2020/02/02",
       "isValide": true
     }
